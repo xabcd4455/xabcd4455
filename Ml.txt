@@ -1,10 +1,61 @@
-- 👋 Hi, I’m @xabcd4455
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
+# https://www.kaggle.com/zhaoyingzhu/heartcsv
 
-<!---
-xabcd4455/xabcd4455 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+# Perform following operation on given dataset.
+
+# 1. Find Shape of Data
+
+# 2. Find Missing Values
+
+# 3. Find data type of each column
+
+# 4. Finding out Zero's
+
+# 5. Find Mean age of patients
+
+# 6. Now extract only Age, Sex, ChestPain, RestBP, Chol. 
+
+# Randomly divide dataset in training (75%) and testing (25%).
+
+# Through the diagnosis test I predicted 100 report as COVID positive, but only 45 of those
+
+# were actually positive. Total 50 people in my sample were actually COVID positive. I have
+
+# total 500 samples. Create confusion matrix based on above data and find I. Accuracy II.
+
+# Precision III. Recall IV. F-1 score
+
+import numpy as np
+
+import pandas as pd
+
+dataFrame=pd.read_csv('/content/Heart.csv')
+
+dataFrame.shape # shape
+
+dataFrame.info() 
+
+dataFrame.head() 
+
+dataFrame.dtypes # datatype 
+
+dataFrame.isnull() # missing values
+
+dataFrame.isnull().sum() # missing values : count
+
+dataFrame.Age.mean() #mean of age
+
+count = (dataFrame['Age'] == 0).sum() # counting zeros
+
+count
+
+# selected columns
+
+var=dataFrame.loc[:,['Age','Sex','ChestPain','RestBP','Chol']] 
+
+var
+
+# Splitting the dataset into train and test sets: 75-25 split
+
+from sklearn.model_selection import train_test_split
+
+X_train, X_test = train_test_split(var, test_size = 0.25, random_state = 42)
