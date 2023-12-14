@@ -195,3 +195,53 @@ num_asc[j]= temp;
 
 }
 
+
+
+Practical No.6
+
+ Program for LED interfacing:
+
+#include<p18f4520.h>
+
+void delay(unsigned int itime);
+
+
+
+void main()
+
+{
+
+TRISD=0;
+
+{
+
+while(1)
+
+{
+
+PORTD=0X00;
+
+delay(100);
+
+PORTD=0xIF;
+
+delay(100);
+
+}
+
+}
+
+}
+
+void delay(unsigned int itime)
+
+{
+
+int i,j;
+
+for(i=0;i<=itime;i++)
+
+for(j=0;j<=1275:j++);
+
+}
+
