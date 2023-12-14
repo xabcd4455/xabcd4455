@@ -70,12 +70,11 @@ Program: addition of array of numbers
 
 #include <pic18f4550.h>
 
-void main(void)
-{
+void main(void) {
 
 int i,sum,n;
 
-int number[] = {1,2,3,4,5,6,7,8,9,10);
+int number[] = {1,2,3,4,5,6,7,8,9,10};
 
 sum = 0;
 
@@ -83,8 +82,7 @@ for(i=0; i<=9;i++)
 
 {
 
-sum = sum+number[i];
-}
+sum = sum+number[i]; }
 
 TRISB =0;
 
@@ -105,17 +103,15 @@ a)Internal to internal memory transfer
 
 #include <pic18f4550.h>
 
-void main(void)
-{
+void main(void) {
 
 int i;
 
-int source1[] = {0x21,0x22,0x23,0x24,0x25};  
+int source1[] = {0x21,0x22,0x23,0x24,0x25};
 
-int dest[] = {0x00,0x00,0x00,0x00,0x00); 
+int dest[] = {0x00,0x00,0x00,0x00,0x00};
 
-for(i=0; i<=4;i++)
-{
+for(i=0; i<=4;i++) {
 
 // counter = 5
 
@@ -136,27 +132,23 @@ b)memory exchange program
 
 #include <pic18f4550.h>
 
-void main(void)
-{
+void main(void) {
 
 int temp,i;
 
-int source1[] = (0x21,0x22,0x23,0x24,0x25);
+int source1[] = {0x21,0x22,0x23,0x24,0x25};
 
-int dest[] = {0x99,0x99,0x99,0x99,0x99);
+int dest[] = {0x99,0x99,0x99,0x99,0x99};
 
-for(i=0; i<=4;i++)
-{
+for(i=0; i<=4;i++) {
 
 temp = source1[i];
 
 source1[i] = dest[i];
 
-dest[i] = temp;
-}
+dest[i] = temp; }
 
 }
-
 
 Practical No.5
 
@@ -169,32 +161,33 @@ Progrm for sorting of no. in ase and des order
 #include <pic18f4550.h>
 
 void main(void)
+
 {
 
-int i.j.temp;
+int i,j,temp;
 
-int num_asc[] = {10,2,5,1.6};
+int num_asc[] = {10,2,5,1,6};
 
-for(i=0; i<=4: i++) 
+for(i=0;i<=4;i++)
 
-{  
+{
 
-for(j=i+1;j<=4;j++) 
+for(j=i+1;j<=4;j++)
 
-if (num_ase[i]> num_asc[j]) 
+if (num_asc[i]> num_asc[j])
 
-{ 
+{
 
-temp = num_asc[i]; 
+temp = num_asc[i];
 
-num_asc[i]=num_asc[j];
+num_asc[i]= num_asc[j];
 
 num_asc[j]= temp;
 
 }
 
 }
-
+}
 
 
 Practical No.6
